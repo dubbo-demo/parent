@@ -18,15 +18,19 @@
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <fastjson.version>1.1.43</fastjson.version>
+        <mysql-connector-java.version>5.1.36</mysql-connector-java.version>
         <druid.version>1.0.23</druid.version>
         <mybatis.version>3.2.7</mybatis.version>
         <mybatis_spring.version>1.2.2</mybatis_spring.version>
-        <mysql-connector-java.version>5.1.36</mysql-connector-java.version>
+        <spring_data.version>1.7.0.RELEASE</spring_data.version>
+        <jedis.version>2.8.1</jedis.version>
         <zkclient.version>0.1</zkclient.version>
         <zookeeper.version>3.4.6</zookeeper.version>
         <dubbo.version>2.8.4</dubbo.version>
+        <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.5</slf4j.version>
         <logback.version>1.0.9</logback.version>
+        <logback_ext_spring.version>0.1.1</logback_ext_spring.version>
 
         <file_encoding>UTF-8</file_encoding>
         <maven_compiler_plugin.version>3.3</maven_compiler_plugin.version>
@@ -157,6 +161,19 @@
         </dependency>
         <!-- begin orm -->
 
+        <!-- begin redis -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring_data.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+        <!-- end redis -->
+
         <!-- dubbo -->
         <dependency>
             <groupId>com.github.sgroschupf</groupId>
@@ -176,6 +193,11 @@
 
         <!-- begin log -->
         <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
@@ -189,6 +211,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.logback-extensions</groupId>
+            <artifactId>logback-ext-spring</artifactId>
+            <version>${logback_ext_spring.version}</version>
         </dependency>
         <!-- end log -->
 
@@ -264,13 +291,13 @@
         <!-- 该配置可以让Maven属性在资源文件(src/main/resources、src/test/resources)中被解析 -->
         <resources>
             <resource>
-                <directory>${basedir}/src/main/resources/*</directory>
+                <directory>${basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
         <testResources>
             <testResource>
-                <directory>${basedir}/src/test/resources/*</directory>
+                <directory>${basedir}/src/test/resources</directory>
             </testResource>
         </testResources>
     </build>
