@@ -35,6 +35,9 @@
         <pinyin4j.version>2.5.0</pinyin4j.version>
         <lombok.verion>1.16.10</lombok.verion>
 
+        <apache_httpclient_version>4.5</apache_httpclient_version>
+        <apache_httpcore_version>4.4.3</apache_httpcore_version>
+
         <file_encoding>UTF-8</file_encoding>
         <maven_compiler_plugin.version>3.3</maven_compiler_plugin.version>
         <java_source.version>1.7</java_source.version>
@@ -49,6 +52,8 @@
         <maven_surefire_plugin.version>2.12.4</maven_surefire_plugin.version>
 
         <patchca.version>0.0.1</patchca.version>
+
+
     </properties>
 
     <dependencies>
@@ -247,6 +252,28 @@
             <version>${lombok.verion}</version>
         </dependency>
 
+        <!-- begin http -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${apache_httpcore_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient-cache</artifactId>
+            <version>${apache_httpclient_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${apache_httpclient_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${apache_httpclient_version}</version>
+        </dependency>
+        <!-- end http -->
 
     </dependencies>
 
