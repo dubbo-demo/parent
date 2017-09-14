@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <properties>
-        <base-service.version>1.0-SNAPSHOT</base-service.version>
-        <member-service.version>1.0-SNAPSHOT</member-service.version>
-        <common.version>1.0-SNAPSHOT</common.version>
+        <base-service.version>1.0.0-SNAPSHOT</base-service.version>
+        <member-service.version>1.0.0-SNAPSHOT</member-service.version>
+        <common.version>1.0.0-SNAPSHOT</common.version>
 
         <springframework.version>4.2.0.RELEASE</springframework.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
@@ -358,16 +358,16 @@
         </testResources>
     </build>
 
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>nexus-releases</id>-->
-            <!--<url>${repo.internal.releases.url}</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>nexus-snapshots</id>-->
-            <!--<url>${repo.internal.snapshots.url}</url>-->
-        <!--</snapshotRepository>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>${repo.internal.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>${repo.internal.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <modules>
         <module>../base-service-api</module>
