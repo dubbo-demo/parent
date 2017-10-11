@@ -35,8 +35,12 @@
         <pinyin4j.version>2.5.0</pinyin4j.version>
         <lombok.verion>1.16.10</lombok.verion>
 
-        <apache_httpclient_version>4.5</apache_httpclient_version>
         <apache_httpcore_version>4.4.3</apache_httpcore_version>
+        <apache_httpclient_version>4.5</apache_httpclient_version>
+
+        <ehcache_version>2.10.0</ehcache_version>
+        <ehcache_core_version>2.6.11</ehcache_core_version>
+        <ehcache_web_version>2.0.4</ehcache_web_version>
 
         <file_encoding>UTF-8</file_encoding>
         <maven_compiler_plugin.version>3.3</maven_compiler_plugin.version>
@@ -275,6 +279,24 @@
         </dependency>
         <!-- end http -->
 
+        <!-- begin ehcache -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>${ehcache_core_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache_version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-web</artifactId>
+            <version>${ehcache_web_version}</version>
+        </dependency>
+        <!-- end ehcache -->
     </dependencies>
 
     <!-- 构建配置 -->
