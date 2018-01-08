@@ -312,6 +312,21 @@
             <version>${ehcache_web_version}</version>
         </dependency>
         <!-- end ehcache -->
+
+        <!-- begin aliyun -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>3.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- end aliyun -->
     </dependencies>
 
     <!-- 构建配置 -->
